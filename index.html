@@ -255,7 +255,7 @@
     .skill-tag:hover { border-color: var(--rose); color: var(--rose-light); }
 
     /* PROJECTS */
-    .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .projects-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; }
     .project-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -343,7 +343,7 @@
       .nav-links { display: none; }
       .section-wrap { padding: 5rem 1.5rem; }
       .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .projects-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; } 
       .exp-item { grid-template-columns: 1fr; gap: 0.5rem; padding: 2rem 1.5rem; }
       .contact-inner { padding: 3rem 1.5rem; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; }
@@ -431,7 +431,7 @@
       <div class="reveal">
         <div class="stats-grid">
           <div class="stat"><span class="stat-num">800+</span><span class="stat-label">Training Hours</span></div>
-          <div class="stat"><span class="stat-num">2+</span><span class="stat-label">Capstone Projects</span></div>
+          <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Shipped Projects</span></div>
           <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Technologies</span></div>
           <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Problems Solved</span></div>
         </div>
@@ -464,6 +464,26 @@
       <h2 class="section-title">Selected <em>Work</em></h2>
     </div>
     <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <p class="project-num">Project 03 · 2026</p>
+        <h3 class="project-name">Grimoire</h3>
+        <img src="grimoireV1-DASHBOARD2.png" alt="Grimoire dashboard" class="project-screenshot lightbox-trigger"
+          onclick="openLightbox(this)" />
+        <img src="grimoireV1-BOOKLIST_entries.png" alt="Grimoire dashboard" class="project-screenshot lightbox-trigger"
+          onclick="openLightbox(this)" />
+        <p class="project-desc">A full-stack personal organization app where users create "chapters" for different areas of
+          their life — job hunt, reading list, journal, habits, and more. Each chapter holds type-aware entries with fields
+          tailored to its content type. Built with a polymorphic entry system, JWT authentication, and a dark, editorial UI.
+        </p>
+        <div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">Vite</span><span
+            class="tech-tag">Node.js</span><span class="tech-tag">Express</span><span class="tech-tag">MongoDB</span><span
+            class="tech-tag">JWT</span><span class="tech-tag">Netlify</span><span class="tech-tag">Render</span></div>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="https://grimoire-ks.netlify.app" target="_blank" class="project-link">Live App ↗</a>
+          <a href="https://github.com/KierstinS2024/grimoire" target="_blank" class="project-link">View on GitHub →</a>
+        </div>
+      </div>
 
       <div class="project-card reveal">
         <p class="project-num">Project 01 · May – Sep 2025</p>
@@ -500,6 +520,9 @@
           <p class="exp-role">Software Developer</p>
           <p class="exp-company">Freelance</p>
           <ul class="exp-bullets">
+            <li>Built and deployed <a href="https://grimoire-ks.netlify.app" target="_blank" class="inline-link">Grimoire</a> — a
+              full-stack personal organization SaaS with JWT auth, a polymorphic entry system supporting 4 content types, and 12
+              protected REST API endpoints. Deployed on Netlify and Render.</li>
             <li>Developed interactive front-end projects —
               <a href="https://kierstins2024.github.io/odin-calculator/" target="_blank" class="inline-link">Live Calculator</a>,
               <a href="https://kierstins2024.github.io/etch-sketch/" target="_blank" class="inline-link">Etch-a-Sketch</a>, and
@@ -540,18 +563,21 @@
       <h2>Let's build<br /><em>something beautiful.</em></h2>
       <p>I'm actively looking for new opportunities. Whether you have a project in mind or just want to connect — I'd love to hear from you.</p>
       <div class="contact-links">
-        <a href="mailto:imagination13@gmail.com" class="contact-link">✉ imagination13@gmail.com</a>
+        <a href="/cdn-cgi/l/email-protection#89e0e4e8eee0e7e8fde0e6e7b8bac9eee4e8e0e5a7eae6e4" class="contact-link">✉ <span
+            class="__cf_email__"
+            data-cfemail="8de4e0eceae4e3ecf9e4e2e3bcbecdeae0ece4e1a3eee2e0">[email&#160;protected]</span></a>
         <a href="https://github.com/KierstinS2024" target="_blank" class="contact-link">⌥ GitHub</a>
         <a href="https://www.linkedin.com/in/KierstinSachs/" target="_blank" class="contact-link">↗ LinkedIn</a>
       </div>
     </div>
   </div>
 
-<!-- LIGHTBOX -->
-<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
     <button class="lightbox-close" onclick="closeLightbox()">✕</button>
     <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()" />
-</div>
+  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -559,6 +585,7 @@
     <span>Crafted with intention &amp; a little darkness.</span>
   </footer>
 
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script>
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
